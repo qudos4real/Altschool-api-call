@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import RepoDetails from '@/views/RepoDetails.vue'
-// import NotFound from '@/views/NotFound.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const routes = [
   {
@@ -14,11 +14,11 @@ const routes = [
     name: 'Repo',
     component: RepoDetails
   },
-  // {
-  //   path: '/:pathMatch(.*)*',
-  //   name: 'not-found',
-  //   component: NotFound
-  // }
+{
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound
+}
 ]
 
 const router = createRouter({

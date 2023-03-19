@@ -17,6 +17,9 @@
         <p>
             <a :href="repo.html_url" target="_blank">View on Github</a>
         </p>
+        <p class="route">
+            <router-link to="/">Go back to home</router-link>
+        </p>
         <p v-if="loading">Loading...</p>
         <p v-if="error">{{error}}</p>
     </div>

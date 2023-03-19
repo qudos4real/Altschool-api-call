@@ -5,8 +5,8 @@
             <router-link :to="{ name: 'Repo', params: { id: repo.name } }" class="repo">{{repo.name}}</router-link>
         </div>
     </div>
-    <p v-if="loading">Loading...</p>
-    <p v-if="error">{{error}}</p>
+    <p v-if="loading" class="loading">Loading...</p>
+    <p v-if="error" class="error">{{error}}</p>
     <div class="btns">
     <button @click="prevPage" :disabled="page === 1">Prev</button>
     <button @click="nextPage" :disabled="repos.length < perPage">Next</button>
@@ -94,12 +94,22 @@ created() {
     padding: 15px 50px;
     border: 1px solid #eee;
     border-radius: 5px;
-    background-color: eee;
+    background-color: grey;
+    color: #fff;
     cursor: pointer;
     font-size: 16px;
 
 }
 .btns > button:hover {
     background-color: aquamarine;
+    color: #000;
+}
+.btns > button:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+.loading {
+    font-size: 40px;
+    color: black;
 }
 </style>
