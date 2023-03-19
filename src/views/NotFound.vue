@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .route {
     font-size: 1.5rem;
     color: aqua;
