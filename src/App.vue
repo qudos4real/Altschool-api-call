@@ -1,11 +1,21 @@
 <template>
+  <div>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/" class="link">Home</router-link>
   </nav>
   <router-view/>
+</div>
 </template>
+<script>
+import HomeView from '@/views/HomeView.vue';
 
+export default {
+  name: 'App',
+  components: {
+    HomeView,
+  },
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -18,13 +28,10 @@
 nav {
   padding: 30px;
 }
-
-nav a {
+.link {
   font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
 }
 </style>
