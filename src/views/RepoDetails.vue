@@ -59,5 +59,22 @@ export default {
 </script>
 
 <style>
-
+.repo-details {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);    
+}
+body {
+    background-color: #f5f5f5;
+}
+p a {
+    color: #0366d6;
+    text-decoration: none;
+}
+p a:hover {
+    text-decoration: underline;
+}
 </style>
